@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykład złożenia relacji</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .dot-bullet > li::before {
+            content: "• ";
+        }
+        .dash-bullet > li::before {
+            content: "- ";
+            margin-left: 20px;
+        }
+        .example {
+            margin-top: 10px;
+        }
+        .arrow {
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            overflow-x: auto;
+        }
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 5px solid #ccc;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        .source {
+            margin-top: 20px;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Przykład złożenia relacji</h1>
+
+    <h2>1. Definicja złożenia relacji:</h2>
+    <p>
+        Złożeniem (superpozycją) relacji <strong>R ⊂ A × B</strong> i <strong>S ⊂ C × D</strong> nazywamy relację <strong>S ∘ R ⊂ A × D</strong> spełniającą warunek:
+    </p>
+    <p>
+        <strong>(x, y) ∈ S ∘ R ⊂ A × D</strong> ⇐⇒ <strong>∃t ∈ B ∩ C</strong> : <strong>( (x, t) ∈ R ∧ (t, y) ∈ S )</strong>.
+    </p>
+
+    <h2>2. Zbiory:</h2>
+    <ul class="dot-bullet">
+        <li>A = {a,b}</li>
+        <li>B = {c,d}</li>
+        <li>C = {d,e}</li>
+        <li>D = {f,g}</li>
+    </ul>
+
+    <h2>3. Relacje:</h2>
+    <ul class="dot-bullet">
+	<p> Dla uproszczenia załóżmy: R=A × B, S=C × D, wtedy:</p>
+        <li>R = {(a,c), (a,d),(b,c), (b,d)}</li>
+        <li>S = {(d,f), (d, g), (e,f), (e,g)}</li>
+    </ul>
+
+    <h2>4. Złożenie relacji (S ∘ R):</h2>
+    <ul class="dot-bullet">
+        <li>B ∩ C={d}. Czyli szukamy w R par (x,d) oraz w S par (d,y).</li>
+    </ul>
+
+    <h2>5. Ostateczne złożenie:</h2>
+    
+    <p>S ∘ R = {(a,f), (a,g), (b,f), (b,g)}</p>
+    
+
+    <p>
+        Źródło: <i>"AGH - Wydział Matematyki Stosowanej - Wstęp do Logiki i Teorii Mnogości, dr. Konrad Nosek."</i>
+    </p>
+</body>
+</html>
